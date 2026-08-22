@@ -14,8 +14,8 @@ celebrant_bday= (now.day,now.month)
 store_message=[]
 
 if celebrant_bday in bday_dic:
-    rand_template=random.choice(os.listdir(r".\letter_templates"))
-    with open(rf".\letter_templates\{rand_template}") as bday_file:
+    rand_template=random.choice(os.listdir(r"./letter_templates"))
+    with open(rf"./letter_templates/{rand_template}") as bday_file:
         bday_message=bday_file.read()
         new_bday_message= bday_message.replace("[NAME]", bday_dic[celebrant_bday]["name"])
         store_message.append(new_bday_message)
