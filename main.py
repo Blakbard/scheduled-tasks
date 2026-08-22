@@ -7,7 +7,7 @@ import smtplib
 MY_EMAIL = os.environ.get("MY_EMAIL")
 MY_PASSWORD = os.environ.get("MY_PASSWORD")
 
-data= pandas.read_csv(r".\birthdays.csv")
+data= pandas.read_csv(r"./birthdays.csv")
 bday_dic= {(data_row.day,data_row.month):data_row for (index,data_row) in data.iterrows()}
 now=dt.datetime.now()
 celebrant_bday= (now.day,now.month)
