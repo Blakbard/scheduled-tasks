@@ -20,7 +20,7 @@ if celebrant_bday in bday_dic:
         new_bday_message= bday_message.replace("[NAME]", bday_dic[celebrant_bday]["name"])
         store_message.append(new_bday_message)
 
-    with smtplib.SMTP("smtp.gmail.com") as connection:
+    with smtplib.SMTP("smtp.gmail.com",587) as connection:
         connection.starttls()
         connection.login(user=MY_EMAIL,password=MY_PASSWORD)
         bday_messages= "".join(store_message)
